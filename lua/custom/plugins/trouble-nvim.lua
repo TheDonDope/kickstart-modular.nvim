@@ -16,5 +16,5 @@ return {
         vim.keymap.set("n", "]t", function()
             require("trouble").previous({ skip_groups = true, jump = true });
         end)
-    end,
+    end
 }
