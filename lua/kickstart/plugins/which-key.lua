@@ -57,11 +57,36 @@ return {
         },
       },
 
-      -- Document existing key chains
       spec = {
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>c', group = '[C]ode' },
+        { '<leader>e', group = '[E]dit' },
+        { '<leader>g', group = '[G]it' },
+        { '<leader>p', group = '[P]roject' },
+        { '<leader>r', group = '[R]ename' },
+        { '<leader>t', group = '[T]est' },
+        { '<leader>w', group = '[W]orkspace' },
+        { '<leader>z', group = '[Z]en' },
+      },
+
+      -- Document existing key chains
+      -- TODO: Revisit this after having configured all keymaps
+      -- spec = {
+      --  { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+      --  { '<leader>d', group = '[D]ocument' },
+      --  { '<leader>r', group = '[R]ename' },
+      --  { '<leader>s', group = '[S]earch' },
+      --  { '<leader>w', group = '[W]orkspace' },
+      --  { '<leader>t', group = '[T]oggle' },
+      --  { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      -- },
+    },
+    keys = {
+      {
+        '<leader>?',
+        function()
+          require('which-key').show { global = false }
+        end,
+        desc = 'Buffer Local Keymaps (which-key)',
       },
     },
   },
